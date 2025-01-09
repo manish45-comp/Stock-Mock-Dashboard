@@ -5,7 +5,7 @@ import Strategies from "./components/Strategies";
 function App() {
   return (
     <>
-      <Stack spacing={2} sx={{ padding: "50px" }}>
+      <Stack spacing={2} sx={{ padding: { xs: "10px", md: "50px" } }}>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
           defaultValue="all-days"
