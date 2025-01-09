@@ -7,6 +7,7 @@ import {
   Share,
 } from "@mui/icons-material";
 import {
+  Badge,
   Box,
   Button,
   Card,
@@ -190,222 +191,252 @@ const Strategies = () => {
                 </Stack>
               </FormGroup>
             </Box>
-            <Card
-              variant="outlined"
+            <Badge
               sx={{
-                padding: 2,
-                borderRadius: 2,
-                bgcolor: "#D9EAFD",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                overflowX: "auto",
-                gap: 5,
+                "& .MuiBadge-badge": {
+                  borderRadius: "3px",
+                },
+              }}
+              color="primary"
+              badgeContent={"L1"}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "left",
               }}
             >
-              <Stack
-                spacing={2}
-                direction="row"
-                alignItems="center"
-                justifyContent="center"
-                flexShrink={0}
+              <Card
+                variant="outlined"
+                sx={{
+                  width: "100%",
+                  padding: 2,
+                  borderRadius: 2,
+                  bgcolor: "#D9EAFD",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  overflowX: "auto",
+                  gap: 5,
+                }}
               >
-                <Checkbox></Checkbox>
-                <TextField
-                  sx={{ maxWidth: "120px" }}
-                  size="small"
-                  id="total-lot"
-                  label="Total Lot"
-                  variant="outlined"
-                  value={1}
-                />
-                <Button variant="contained" color="success">
-                  Buy
-                </Button>
-                <FormControl>
-                  <InputLabel id="index-label">Price</InputLabel>
-                  <Select
-                    sx={{ minWidth: "120px" }}
+                <Stack
+                  spacing={2}
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  flexShrink={0}
+                >
+                  <Checkbox></Checkbox>
+                  <TextField
+                    sx={{ maxWidth: "120px" }}
                     size="small"
-                    labelId="Price-label"
-                    id="Price-select"
-                    label="Price"
-                    defaultValue={40}
-                  >
-                    <MenuItem value={10}>ATM-150</MenuItem>
-                    <MenuItem value={20}>ATM-100</MenuItem>
-                    <MenuItem value={30}>ATM-50</MenuItem>
-                    <MenuItem value={40}>ATM</MenuItem>
-                    <MenuItem value={50}>ATM+50</MenuItem>
-                    <MenuItem value={60}>ATM+100</MenuItem>
-                    <MenuItem value={70}>ATM+150</MenuItem>
-                  </Select>
-                </FormControl>
-                <Button variant="contained" color="primary">
-                  Put
-                </Button>
-              </Stack>
-              <Stack
-                direction="row"
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Target Profit"
-                  onClick={() => console.log("clicked")}
-                />
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Stop Loss"
-                  onClick={() => console.log("clicked")}
-                />
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Trail Stop Loss"
-                  onClick={() => console.log("clicked")}
-                />
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Journey"
-                  onClick={() => console.log("clicked")}
-                />
-                <FormControl>
-                  <InputLabel id="index-label">Expiry</InputLabel>
-                  <Select
-                    sx={{ minWidth: "120px" }}
-                    labelId="expiry-label"
-                    id="index-select"
-                    label="Expiry"
+                    id="total-lot"
+                    label="Total Lot"
+                    variant="outlined"
+                    value={1}
+                  />
+                  <Button variant="contained" color="success">
+                    Buy
+                  </Button>
+                  <FormControl>
+                    <InputLabel id="index-label">Price</InputLabel>
+                    <Select
+                      sx={{ minWidth: "120px" }}
+                      size="small"
+                      labelId="Price-label"
+                      id="Price-select"
+                      label="Price"
+                      defaultValue={40}
+                    >
+                      <MenuItem value={10}>ATM-150</MenuItem>
+                      <MenuItem value={20}>ATM-100</MenuItem>
+                      <MenuItem value={30}>ATM-50</MenuItem>
+                      <MenuItem value={40}>ATM</MenuItem>
+                      <MenuItem value={50}>ATM+50</MenuItem>
+                      <MenuItem value={60}>ATM+100</MenuItem>
+                      <MenuItem value={70}>ATM+150</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <Button variant="contained" color="primary">
+                    Put
+                  </Button>
+                </Stack>
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Chip
+                    icon={<Add />}
                     size="small"
-                    defaultValue={10}
-                  >
-                    <MenuItem value={10}>Weekly</MenuItem>
-                    <MenuItem value={20}>Next Weekly</MenuItem>
-                    <MenuItem value={30}>Monthly</MenuItem>
-                  </Select>
-                </FormControl>
-                <IconButton>
-                  <CopyAll />
-                </IconButton>
-                <IconButton>
-                  <Delete />
-                </IconButton>
-              </Stack>
-            </Card>
-            <Card
-              variant="outlined"
+                    label="Target Profit"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <Chip
+                    icon={<Add />}
+                    size="small"
+                    label="Stop Loss"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <Chip
+                    icon={<Add />}
+                    size="small"
+                    label="Trail Stop Loss"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <Chip
+                    icon={<Add />}
+                    size="small"
+                    label="Journey"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <FormControl>
+                    <InputLabel id="index-label">Expiry</InputLabel>
+                    <Select
+                      sx={{ minWidth: "120px" }}
+                      labelId="expiry-label"
+                      id="index-select"
+                      label="Expiry"
+                      size="small"
+                      defaultValue={10}
+                    >
+                      <MenuItem value={10}>Weekly</MenuItem>
+                      <MenuItem value={20}>Next Weekly</MenuItem>
+                      <MenuItem value={30}>Monthly</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <IconButton>
+                    <CopyAll />
+                  </IconButton>
+                  <IconButton>
+                    <Delete />
+                  </IconButton>
+                </Stack>
+              </Card>
+            </Badge>
+            <Badge
               sx={{
-                padding: 2,
-                borderRadius: 2,
-                bgcolor: "#D9EAFD",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                overflowX: "auto",
-                gap: 5,
+                "& .MuiBadge-badge": {
+                  borderRadius: "3px",
+                },
+              }}
+              color="primary"
+              badgeContent={"L2"}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "left",
               }}
             >
-              <Stack
-                spacing={2}
-                direction="row"
-                alignItems="center"
-                justifyContent="center"
-                flexShrink={0}
+              <Card
+                variant="outlined"
+                sx={{
+                  width: "100%",
+                  padding: 2,
+                  borderRadius: 2,
+                  bgcolor: "#D9EAFD",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  overflowX: "auto",
+                  gap: 5,
+                }}
               >
-                <Checkbox></Checkbox>
-                <TextField
-                  sx={{ maxWidth: "120px" }}
-                  size="small"
-                  id="total-lot"
-                  label="Total Lot"
-                  variant="outlined"
-                  value={1}
-                />
-                <Button variant="contained" color="success">
-                  Buy
-                </Button>
-                <FormControl>
-                  <InputLabel id="index-label">Price</InputLabel>
-                  <Select
-                    sx={{ minWidth: "120px" }}
+                <Stack
+                  spacing={2}
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  flexShrink={0}
+                >
+                  <Checkbox></Checkbox>
+                  <TextField
+                    sx={{ maxWidth: "120px" }}
                     size="small"
-                    labelId="Price-label"
-                    id="Price-select"
-                    label="Price"
-                    defaultValue={40}
-                  >
-                    <MenuItem value={10}>ATM-150</MenuItem>
-                    <MenuItem value={20}>ATM-100</MenuItem>
-                    <MenuItem value={30}>ATM-50</MenuItem>
-                    <MenuItem value={40}>ATM</MenuItem>
-                    <MenuItem value={50}>ATM+50</MenuItem>
-                    <MenuItem value={60}>ATM+100</MenuItem>
-                    <MenuItem value={70}>ATM+150</MenuItem>
-                  </Select>
-                </FormControl>
-                <Button variant="contained" color="primary">
-                  Put
-                </Button>
-              </Stack>
-              <Stack
-                direction="row"
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Target Profit"
-                  onClick={() => console.log("clicked")}
-                />
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Stop Loss"
-                  onClick={() => console.log("clicked")}
-                />
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Trail Stop Loss"
-                  onClick={() => console.log("clicked")}
-                />
-                <Chip
-                  icon={<Add />}
-                  size="small"
-                  label="Journey"
-                  onClick={() => console.log("clicked")}
-                />
-                <FormControl>
-                  <InputLabel id="index-label">Expiry</InputLabel>
-                  <Select
-                    sx={{ minWidth: "120px" }}
-                    labelId="expiry-label"
-                    id="index-select"
-                    label="Expiry"
+                    id="total-lot"
+                    label="Total Lot"
+                    variant="outlined"
+                    value={1}
+                  />
+                  <Button variant="contained" color="success">
+                    Buy
+                  </Button>
+                  <FormControl>
+                    <InputLabel id="index-label">Price</InputLabel>
+                    <Select
+                      sx={{ minWidth: "120px" }}
+                      size="small"
+                      labelId="Price-label"
+                      id="Price-select"
+                      label="Price"
+                      defaultValue={40}
+                    >
+                      <MenuItem value={10}>ATM-150</MenuItem>
+                      <MenuItem value={20}>ATM-100</MenuItem>
+                      <MenuItem value={30}>ATM-50</MenuItem>
+                      <MenuItem value={40}>ATM</MenuItem>
+                      <MenuItem value={50}>ATM+50</MenuItem>
+                      <MenuItem value={60}>ATM+100</MenuItem>
+                      <MenuItem value={70}>ATM+150</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <Button variant="contained" color="primary">
+                    Put
+                  </Button>
+                </Stack>
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Chip
+                    icon={<Add />}
                     size="small"
-                    defaultValue={10}
-                  >
-                    <MenuItem value={10}>Weekly</MenuItem>
-                    <MenuItem value={20}>Next Weekly</MenuItem>
-                    <MenuItem value={30}>Monthly</MenuItem>
-                  </Select>
-                </FormControl>
-                <IconButton>
-                  <CopyAll />
-                </IconButton>
-                <IconButton>
-                  <Delete />
-                </IconButton>
-              </Stack>
-            </Card>
+                    label="Target Profit"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <Chip
+                    icon={<Add />}
+                    size="small"
+                    label="Stop Loss"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <Chip
+                    icon={<Add />}
+                    size="small"
+                    label="Trail Stop Loss"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <Chip
+                    icon={<Add />}
+                    size="small"
+                    label="Journey"
+                    onClick={() => console.log("clicked")}
+                  />
+                  <FormControl>
+                    <InputLabel id="index-label">Expiry</InputLabel>
+                    <Select
+                      sx={{ minWidth: "120px" }}
+                      labelId="expiry-label"
+                      id="index-select"
+                      label="Expiry"
+                      size="small"
+                      defaultValue={10}
+                    >
+                      <MenuItem value={10}>Weekly</MenuItem>
+                      <MenuItem value={20}>Next Weekly</MenuItem>
+                      <MenuItem value={30}>Monthly</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <IconButton>
+                    <CopyAll />
+                  </IconButton>
+                  <IconButton>
+                    <Delete />
+                  </IconButton>
+                </Stack>
+              </Card>
+            </Badge>
           </Stack>
         </CardContent>
       </Card>
