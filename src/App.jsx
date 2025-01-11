@@ -1,6 +1,11 @@
 import { FormControlLabel, Radio, RadioGroup, Stack } from "@mui/material";
 import Positions from "./components/Positions";
 import Strategies from "./components/Strategies";
+import FilteredDashboard from "./components/FilteredDashboard";
+import DayWiseBreakupTable from "./components/DayWiseBreakupTable";
+import MonthlyBreakupTable from "./components/MonthlyBreakupTable";
+import Charts from "./components/Charts";
+import DataTable from "./components/DataTable";
 
 function App() {
   return (
@@ -71,6 +76,11 @@ function App() {
         </RadioGroup>
         <Positions />
         <Strategies />
+        <FilteredDashboard />
+        <DayWiseBreakupTable />
+        <MonthlyBreakupTable />
+        <Charts />
+        <DataTable />
       </Stack>
     </>
   );

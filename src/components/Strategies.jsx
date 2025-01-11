@@ -644,7 +644,7 @@ const Strategies = () => {
           flexDirection: { xs: "column", md: "row" },
           alignItems: "end",
           justifyContent: "space-between",
-          gap: 5,
+          gap: 2,
         }}
       >
         <Box
